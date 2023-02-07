@@ -7,3 +7,56 @@
 .debug *{
     font-family: 'Montserrat', sans-serif;
 }
+
+/* ____________generali_____________ */
+
+.flex{
+    display: flex ;
+}
+
+
+a{
+    text-decoration: none;
+    color: rgb(115, 115, 115);
+    font-weight: bold;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* _____________HEADER________________ */
+
+/* ######### navbar verticale ######## */
+
+#nav_vertical{
+    width: 250px;
+    height: 100%;
+    background-color: black;
+
+    flex-flow: column wrap;
+    justify-content: space-between;
+    gap: 20em;
+   
+    padding: 1em 0;
+    padding-right: 3em;
+    padding-left: 1em;
+    color: rgb(115, 115, 115);
+
+    line-height: 3em;
+
+    font-size: 15px;
+}
+
+#nav_vertical #upper_nav{
+    flex-direction: column;
+    gap: 1em;
+}
+
+.logo-big img{
+    height: 3em;
+}
+
+.logo-small{
+    display: none;
+}
