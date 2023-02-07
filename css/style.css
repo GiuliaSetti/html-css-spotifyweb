@@ -97,3 +97,51 @@ ul{
     margin-right: 0.5em;
     background-color: darkgray;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***************************************
+***************MEDIAQUERY*****************
+*************************************** */
+
+@media screen and (max-width: 576px){
+    header nav #nav_vertical{
+        width: 30px;
+    }
+
+    #nav_vertical .logo-small{
+        display: block;
+    }
+
+    #nav_vertical .logo-big{
+        display: none;
+    }
+
+    #nav_vertical .create_playlist{
+        display: none;
+    }
+
+    .to_hide{
+        display: none;
+    }
+
+    #bottom_nav .nav_install{
+        border: 0px;
+    }
+
+    
+}
