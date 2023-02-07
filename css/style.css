@@ -10,6 +10,12 @@
 
 /* ____________generali_____________ */
 
+#container{
+    height: 100vh;
+    width: 100%;
+}
+
+
 .flex{
     display: flex ;
 }
@@ -48,6 +54,9 @@ ul{
     font-size: 15px;
 }
 
+
+/* navabr sopra */
+
 #nav_vertical #upper_nav{
     flex-direction: column;
     gap: 1em;
@@ -61,6 +70,19 @@ ul{
     display: none;
 }
 
+.create_playlist a > i{
+    font-size: 2em;
+    padding-right: 0.5em;
+    vertical-align: middle;
+}
+
+
+
+/* generali navbar */
+
+#nav_vertical span{
+    padding-left: 0.5em;
+}
 
 .vertical_menu img, 
 .logo-small img{
@@ -81,6 +103,8 @@ ul{
     padding: 0.5em 0 ;
 }
 
+/* navbar sotto */
+
 #bottom_nav a > img{
     padding: 0 0.1em;
 }
@@ -88,7 +112,6 @@ ul{
 .nav_install img{
     height: 1.4em;
 }
-
 
 #nav_vertical .nav_user img{
     height: 30px;
@@ -100,6 +123,50 @@ ul{
 
 
 
+/*_____________ MAIN_____________ */
+
+
+
+#main_content{
+    width: calc(100% - 250px);
+    height: 100%;
+    background-color: #141922;
+    color: white;
+    
+    padding: 6em 3em;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    overflow: auto;
+}
+
+
+
+/* bottone effettua l'upgrade___________ */
+
+#upgrade_bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.64);
+    width: calc(100% - 250px);
+    height: 70px;
+    text-align: right;
+    z-index: 1;
+}
+
+
+.upgrade_btn{
+    margin: 1em 1em;
+    padding: 0.8em 1em;
+    background-color: transparent;
+    color: white;
+    border: 2px white solid;
+    border-radius: 2em;
+
+}
 
 
 
@@ -119,8 +186,9 @@ ul{
 *************************************** */
 
 @media screen and (max-width: 576px){
-    header nav #nav_vertical{
+    #nav_vertical{
         width: 30px;
+        height: 100%;
     }
 
     #nav_vertical .logo-small{
