@@ -60,3 +60,40 @@ ul{
 .logo-small{
     display: none;
 }
+
+
+.vertical_menu img, 
+.logo-small img{
+    height: 2em;
+}
+
+#nav_vertical .nav_install{
+    border-bottom: 2px solid darkgray;
+}
+
+.nav_install a,
+.nav_user a,
+.vertical_menu a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 0.5em 0 ;
+}
+
+#bottom_nav a > img{
+    padding: 0 0.1em;
+}
+
+.nav_install img{
+    height: 1.4em;
+}
+
+
+#nav_vertical .nav_user img{
+    height: 30px;
+    object-position: center;
+    border-radius: 50%;   
+    margin-right: 0.5em;
+    background-color: darkgray;
+  }
