@@ -5,6 +5,8 @@
 }
 
 .debug *{
+
+    outline: 1px solid yellow;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -64,44 +66,58 @@ button{
     cursor: pointer;
 }
 
-/* _____________SIDEBAR_____________ */
+/* _________________________________ */
 
+/* ************SIDEBAR****************/
 
 .sidebar{
+    padding-right: 3rem ;
     flex-direction: column;
     justify-content: space-between;
+    gap: 30px;
 
-    padding-right: 3rem;
+    overflow: auto;
+
 }
 
-.sidebar #upper_side{
-    height: 75%;
+#upper_side{
+    height: 100%;
+    max-height: 480px;
+    
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.sidebar #bottom_side{
-    width: 100%;
-    height: 15%;
-
+#bottom_side{
+    height: 100%;
+    max-height: 100px;
+    
+    flex-direction: column;
+    justify-content:space-between;
     padding: 0 1rem;
 }
 
-#upperside{
-    flex-direction: column;
-    gap: 10px;
-}
-
-.sidebar a,
-.create_playlist a{
-    font-weight: bold;
+.sidebar a{
     color: rgba(255, 255, 255, 0.4);
 }
 
+.side_menu img, 
+#bottom_side img{
+    opacity: 0.4;
+}
 
-/* //////PARTE SOPRA///// */
-/* logo____ */
 
-.logos{
+/* UPPER SIDE_____ */
+
+/* logo */
+
+
+.logo-big{
     padding: 1rem;
+}
+
+.logo-big img{
+    height: 100%;
 }
 
 .logo-small{
@@ -109,47 +125,65 @@ button{
 }
 
 .logo-small img{
-    height: 40px;
+    height: 35px;
 }
 
-/* menu_____ */
+/* menu */
+/* 
+#upper_bar .side_menu{
+ 
+} */
 
-.side_menu a{
+#upper_side .side_menu li img{
+    height: 35px;
+}
+
+#upper_side .side_menu li{
+    padding-left: 1rem;
+}
+
+#upper_side .side_menu a{
     display: flex;
     align-items: center;
+    gap: 10px;
+}
 
+/* crea playlist */
+
+#upper_side .create_playlist{
+    
+    padding-left: 1rem;
+
+    line-height: 25px;
+    overflow: auto;
+    
+}
+
+
+#upper_side .create_playlist h3{
+    padding: 10px 0;
+}
+
+#upper_side .create_playlist > a{
+    font-size: 16px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+}
+
+#upper_side .create_playlist > a i{
+    font-size: 30px;
+}
+
+
+/* BOTTOM SIDE_____ */
+
+#bottom_side .side_install{
+    height: 50%;
+    border-bottom: 2px solid gray;
     padding-top: 10px;
 }
-
-.side_menu li{
-    padding: 0 1rem;
-}
-
-.side_menu a > img{
-    height: 40px;
-    opacity: 0.4;
-}
-
-/* playlist_____ */
-
-.create_playlist i{
-    font-size: 2rem;
-}
-
-.create_playlist{
-    line-height: 1.8rem;
-    padding: 1rem 1rem;
-}
-
-.create_playlist > a{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-
-/* //////PARTE SOTTO ///// */
-
 
 #bottom_side a{
     display: flex;
@@ -157,25 +191,21 @@ button{
     gap: 10px;
 }
 
-#bottom_side .side_install{
-    padding: 10px 0;
-    border-bottom: gray 2px solid;
-}
-
 #bottom_side .side_user{
-    padding: 10px 0;
+    height: 50%;
+    padding-top: 10px;
 }
 
-#bottom_side .side_install img{
-    height: 30px;
-}
 
-#bottom_side .side_user img{
-    height: 40px;
-    background-color: gray;
+#bottom_side .side_install a > img,
+#bottom_side .side_user a > img{
+    height: 35px;
+}
+ 
+#bottom_side .side_user a > img{
     border-radius: 50%;
+    background-color: gray;
 }
-
 
 /* ********************************* */
 
@@ -185,8 +215,8 @@ button{
 
 /* upgrade bar_________ */
 
-#main_content main .upgrade_bar{
-    width: 100%;
+.upgrade_bar{
+    width: calc(100% - 250px);
     height: 80px;
 
     position: fixed;
@@ -195,7 +225,7 @@ button{
 
     padding:20px;
 
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
 
     text-align: right;
 }
@@ -423,16 +453,13 @@ footer .footer_right .right_icons{
         width: calc(100% - 80px);
     }
 
-
     .logo-small{
         display: block;
     }
 
-    .hide{
-        display: none;
-    }
-
-    .create_playlist{
+    .hide,
+    .create_playlist,
+    .logo-big{
         display: none;
     }
 
