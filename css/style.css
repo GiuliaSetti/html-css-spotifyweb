@@ -41,3 +41,214 @@ footer{
     height: 90px;
     background-color: rgb(51, 51, 51);
 }
+
+/* *************generali************ */
+
+.flex{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    display: block;
+}
+
+/* _____________SIDEBAR_____________ */
+
+
+.sidebar{
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-right: 3rem;
+}
+
+.sidebar #upper_side{
+    height: 75%;
+}
+
+.sidebar #bottom_side{
+    width: 100%;
+    height: 15%;
+
+    padding: 0 1rem;
+}
+
+#upperside{
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar a,
+.create_playlist a{
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* //////PARTE SOPRA///// */
+/* logo____ */
+
+.logos{
+    padding: 1rem;
+}
+
+.logo-small{
+    display: none;
+}
+
+.logo-small img{
+    height: 40px;
+}
+
+/* menu_____ */
+
+.side_menu a{
+    display: flex;
+    align-items: center;
+
+    padding-top: 10px;
+}
+
+.side_menu li{
+    padding: 0 1rem;
+}
+
+.side_menu a > img{
+    height: 40px;
+    opacity: 0.4;
+}
+
+/* playlist_____ */
+
+.create_playlist i{
+    font-size: 2rem;
+}
+
+.create_playlist{
+    line-height: 1.8rem;
+    padding: 1rem 1rem;
+}
+
+.create_playlist > a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* //////PARTE SOTTO ///// */
+
+
+#bottom_side a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#bottom_side .side_install{
+    padding: 10px 0;
+    border-bottom: gray 2px solid;
+}
+
+#bottom_side .side_user{
+    padding: 10px 0;
+}
+
+#bottom_side .side_install img{
+    height: 30px;
+}
+
+#bottom_side .side_user img{
+    height: 40px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************ */
+
+/* ____________MEDIA QUERY_____________ */
+
+
+@media screen and (max-width:576px){
+    #main_content header{
+        width: 80px;
+        height: 100%;
+    }
+
+    #main_content main{
+        width: calc(100% - 80px);
+    }
+
+
+    .logo-small{
+        display: block;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .create_playlist{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HOVER */
+
+
+
