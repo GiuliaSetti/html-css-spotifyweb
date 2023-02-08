@@ -177,7 +177,158 @@ img{
 
 
 
+/* *********************************** */
 
+
+/* ****************FOOTER************ */
+
+footer{
+    justify-content: space-between;
+}
+
+footer a{
+    color: white;
+}
+
+
+/* left______________________________ */
+
+footer .footer_left{
+    width: 100%;
+    max-width: 300px;
+
+    padding: 20px 10px;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    color: white;
+}
+
+/* albumcover */
+
+footer .footer_left .album_cover{
+    height: 100%;
+}
+
+footer .footer_left .album_cover img{
+    height: 100%;
+}
+
+/* nome canzone */
+
+footer .footer_left .song_name{
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+footer .footer_left .song_name span{
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* center____________________________ */
+
+footer .footer_center{
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
+
+    flex-direction: column;
+}
+
+
+/* barra pulsanti */
+
+footer .footer_center .player_btns{
+    height: 50%;
+}
+
+footer .footer_center .player_btns ul{
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+footer .footer_center .player_btns i{
+    font-size: 1.5rem;
+}
+
+/* barra riproduzione */
+
+
+footer .footer_center .player_line{
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    font-size: 13px;
+
+    color: white;
+    font-weight: bold;
+}
+
+footer .footer_center .player_bar{
+    flex-grow: 1;
+}
+
+footer .footer_center .bar_total{
+    width: 100%;
+    height: 4px;
+    background-color: gray;
+}
+
+footer .footer_center .current_bar{
+    width: 15%;
+    height: 100%;
+    background-color: white;
+}
+
+/* right__________________________ */
+
+footer .footer_right{
+    width: 100%;
+    max-width: 300px;
+
+    padding: 20px 10px;
+
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* icone */
+
+footer .footer_right .right_icons{
+    width: 50%;
+}
+
+.right_icons ul{
+    justify-content: space-between;
+}
+
+
+/* barra volume */
+
+.volume_bar{
+    flex-grow: 1;
+}
+
+.volume_bar_total{
+    width: 100%;
+    height: 4px;
+    background-color: gray;
+}
+
+.volume_bar_current{
+    height: 100%;
+    width: 35%;
+    background-color: white;
+}
 
 
 
