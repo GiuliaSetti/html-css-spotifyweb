@@ -215,7 +215,7 @@ button{
 
 /* upgrade bar_________ */
 
-.upgrade_bar{
+#main_content main .upgrade_bar{
     width: calc(100% - 250px);
     height: 80px;
 
@@ -241,6 +241,31 @@ button{
 
     font-weight: bold;   
 }
+
+/* categories list____________ */
+
+#main_container{
+    height: 100%;
+    padding: 100px 30px;
+}
+
+#main_container .categories ul{
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+#main_container .categories ul > li{
+    margin: 10px 20px;
+}
+
+#main_container .categories ul > li a{
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+
 
 
 
@@ -445,16 +470,22 @@ footer .footer_right .right_icons{
 
 @media screen and (max-width:576px){
     #main_content header{
-        width: 80px;
+        width: 60px;
         height: 100%;
     }
 
-    #main_content main{
-        width: calc(100% - 80px);
+    .sidebar #upper_side{
+        justify-content: flex-start;
+    }
+
+    #main_content main,
+    #main_content main .upgrade_bar{
+        width: calc(100% - 60px);
     }
 
     .logo-small{
         display: block;
+        padding: 1rem;
     }
 
     .hide,
