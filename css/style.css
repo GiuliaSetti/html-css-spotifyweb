@@ -245,6 +245,7 @@ button{
     font-weight: bold;   
 }
 
+/* ////// */
 /* categories list____________ */
 
 #main_container{
@@ -268,9 +269,7 @@ button{
     color: rgba(255, 255, 255, 0.4);
 }
 
-
-
-
+/* /////// */
 /* recently played_____ */
 
 #main_container span {
@@ -300,6 +299,20 @@ button{
     width: 100%;
 }
 
+.played_album{
+    position: relative;
+}
+
+.played_album i{
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    font-size: 3em;
+    display: none;
+}
+
+
+
 .played_container .played_card .played_name{
     margin-top: 10px;
     width: 100%;
@@ -322,25 +335,12 @@ button{
     padding: 20px 0;
 }
 
-
 .round img{
     border-radius: 50%;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* *********************************** */
-
 
 /* ****************FOOTER************ */
 
@@ -494,26 +494,6 @@ footer .footer_right .right_icons{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ************************************ */
 
 /* ____________MEDIA QUERY_____________ */
@@ -548,23 +528,29 @@ footer .footer_right .right_icons{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* HOVER */
 
+.side_menu li:hover{
+    border-left: 2px solid yellowgreen;
+}
 
+#upper_side li:hover a,
+#bottom_side a:hover{
+    color: white;
+}
 
+#upper_side li:hover img{
+    opacity: 1;
+}
+
+main .played_album:hover img{
+    filter: brightness(0.5);
+}
+
+.recently_played .played_album:hover i{
+    display: block;
+}
+
+.created_for .played_album:hover i{
+    display: block;
+}
