@@ -60,6 +60,10 @@ img{
     display: block;
 }
 
+button{
+    cursor: pointer;
+}
+
 /* _____________SIDEBAR_____________ */
 
 
@@ -171,6 +175,58 @@ img{
     background-color: gray;
     border-radius: 50%;
 }
+
+
+/* ********************************* */
+
+
+/* ****************MAIN**************** */
+
+
+/* upgrade bar_________ */
+
+#main_content main .upgrade_bar{
+    width: 100%;
+    height: 80px;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    padding:20px;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    text-align: right;
+}
+
+#main_content main .upgrade_bar .upgrade_btn{
+    color: white;
+    background-color: transparent;
+
+    padding: 10px 30px;
+
+    border: 2px solid white;
+    border-radius: 30px;
+
+    font-weight: bold;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
