@@ -5,8 +5,8 @@
 }
 
 .debug *{
-
-    /* outline: 1px solid yellow; */
+/* 
+    outline: 1px solid yellow; */
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -37,7 +37,7 @@
     height: 100%;
     
     background-color: rgb(27, 27, 27);
-    overflow-y: auto;
+   
 }
 
 footer{
@@ -78,25 +78,18 @@ button{
     justify-content: space-between;
     gap: 30px;
 
-    overflow: auto;
-
+    overflow-y: auto;
 }
 
 #upper_side{
-    height: 100%;
-    max-height: 480px;
-    
     flex-direction: column;
     justify-content: space-between;
 }
 
-#bottom_side{
-    height: 100%;
-    max-height: 100px;
-    
+#bottom_side{   
     flex-direction: column;
     justify-content:space-between;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
 }
 
 .sidebar a{
@@ -157,8 +150,6 @@ button{
     padding-left: 1rem;
 
     line-height: 25px;
-    overflow: auto;
-    
 }
 
 
@@ -225,6 +216,7 @@ button{
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 1;
 
     padding:20px;
 
@@ -246,28 +238,46 @@ button{
 }
 
 /* ////// */
-/* categories list____________ */
+
 
 #main_container{
     height: 100%;
     padding: 100px 20px;
 
     color: white;
+    overflow-y: auto;
 }
+
+/* categories list____________ */
 
 #main_container .categories ul{
     flex-flow: row wrap;
     justify-content: center;
+    margin-bottom: 3em;
 }
 
 
 #main_container .categories ul > li{
     margin: 10px 20px;
+    position: relative;
 }
 
 #main_container .categories ul > li a{
     color: rgba(255, 255, 255, 0.4);
+    font-weight: bold;
 }
+
+#main_container .categories ul > li a.active:before {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+
+    height: 3px;
+    width: 50px;
+    background-color: yellowgreen;
+  }
 
 /* /////// */
 /* recently played_____ */
@@ -282,14 +292,13 @@ button{
 
 .recently_played .played_container{
     flex-flow: row wrap;
-    /* overflow-y: auto; */
 }
 
 .played_container .played_card{
 
     width: calc(100% / 6 - 1rem);
-
-    min-width: 180px;
+/* 
+    min-width: 180px; */
     margin: 1rem 0.5rem;
     flex-direction: column;
     gap: 5px;
@@ -305,12 +314,12 @@ button{
 
 .played_album i{
     position: absolute;
-    top: 40%;
-    right: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 3em;
     display: none;
 }
-
 
 
 .played_container .played_card .played_name{
@@ -389,6 +398,11 @@ footer .footer_left .song_name span{
     font-weight: bold;
     color: rgba(255, 255, 255, 0.3);
 }
+
+footer .footer_left .song_icons i{
+    color: rgba(255, 255, 255, 0.3);
+}
+
 
 /* center____________________________ */
 
@@ -528,7 +542,27 @@ footer .footer_right .right_icons{
 }
 
 
+@media screen and (max-width:992px) {
+    .played_container .played_card{
+        width: calc(100% / 4 - 1rem);
+    }
+    
+}
+
+
+@media screen and (max-width:768px) {
+    .played_container .played_card{
+        width: calc(100% / 2 - 1rem);
+    }
+    
+}
+
+
+
+
 /* HOVER */
+
+/* sidebar */
 
 .side_menu li:hover{
     border-left: 2px solid yellowgreen;
@@ -543,14 +577,108 @@ footer .footer_right .right_icons{
     opacity: 1;
 }
 
+
+/* main */
+
+#main_container .categories ul > li a:hover{
+    color: white;
+}
+
 main .played_album:hover img{
     filter: brightness(0.5);
 }
 
 .recently_played .played_album:hover i{
     display: block;
+    cursor: pointer;
 }
 
 .created_for .played_album:hover i{
+    display: block;
+    cursor: pointer;
+}
+
+
+.popular_artists .played_card .played_album .round:hover i{
+    display: block;
+    cursor: pointer;
+}
+
+
+/* footer */
+
+footer .bigger_btn:hover{
+    transform: scale(1.3);
+}
+
+
+footer .footer_left .song_name span:hover{
+    text-decoration: underline;
+}
+
+footer .footer_left .song_icons i:hover{
+    color: white;
+}
+
+footer .footer_left .song_icons i:hover{
+    color: white;
+}
+
+/* timeline */
+
+.bar_total .current_bar_green{
+    width: 15%;
+    height: 100%;
+    background-color: yellowgreen;
+
+    position: relative;
+    display: none;
+}
+
+.player_line .player_bar .current_bar_green i{
+    position: absolute;
+    bottom: -4px;
+    left: 100%;
+    cursor: pointer;
+}
+
+
+.bar_total:hover .current_bar{
+    display: none;
+}
+
+
+.bar_total:hover .current_bar_green{
+    display: block;
+}
+
+/* volume */
+
+.volume_bar_total .volume_bar_current_green{
+    width: 35%;
+    height: 100%;
+    background-color: yellowgreen;
+
+    position: relative;
+    display: none;
+    
+}
+
+.volume_bar .volume_bar_current_green i{
+    position: absolute;
+    bottom: -4px;
+    left: 100%;
+    cursor: pointer;
+    color: white;
+    font-size: 10px;
+}
+
+
+.volume_bar_total:hover .volume_bar_current{
+    display: none;
+}
+
+
+.volume_bar_total:hover .volume_bar_current_green{
     display: block;
 }
