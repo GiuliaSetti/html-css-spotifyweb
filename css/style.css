@@ -599,17 +599,21 @@ main .played_album:hover img{
 }
 
 
-.popular_artists .played_card .played_album .round:hover i{
+.popular_artists .played_card .played_album.round:hover i{
     display: block;
     cursor: pointer;
 }
 
 
+
+
 /* footer */
 
-footer .bigger_btn:hover{
-    transform: scale(1.3);
+footer .footer_left .album_cover img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
+
 
 
 footer .footer_left .song_name span:hover{
@@ -625,6 +629,11 @@ footer .footer_left .song_icons i:hover{
 }
 
 /* timeline */
+
+footer .bigger_btn:hover{
+    transform: scale(1.3);
+}
+
 
 .bar_total .current_bar_green{
     width: 15%;
@@ -651,6 +660,7 @@ footer .footer_left .song_icons i:hover{
 .bar_total:hover .current_bar_green{
     display: block;
 }
+
 
 /* volume */
 
